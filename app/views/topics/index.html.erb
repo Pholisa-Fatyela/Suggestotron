@@ -19,7 +19,11 @@
   <tbody>
     <% @topics.each do |topic| %>
       <tr>
-        <td><%= topic.title %></td>
+        <td>
+          <span class="has-tooltip" data-toggle="tooltip" title="<%= "Created on #{topic.created_at.strftime("%m/%e/%Y at %w:%M %p")}, Last modified on #{topic.updated_at.strftime("%m/%e/%Y at %w:%M %p")}" %>">
+            <%= topic.title %>
+          </span>
+        </td>
         <td><%= topic.description %></td>
         <td>
           <%= link_to topic, class: 'btn btn-primary btn-xs' do %>
