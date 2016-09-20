@@ -10,5 +10,9 @@
   <%= @topic.description %>
 </p>
 
-<%= link_to 'Edit', edit_topic_path(@topic) %> |
-<%= link_to 'Back', topics_path %>
+<%= link_to edit_topic_path(@topic), class: 'btn btn-primary btn-xs' do %>
+  <i class="glyphicon glyphicon-pencil"></i> Edit
+<% end %> |
+<%= link_to topics_path, class: 'btn btn-primary btn-xs' do %>
+  <i class="glyphicon glyphicon-chevron-left"></i> Back
+<% end %>
