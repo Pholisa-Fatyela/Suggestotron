@@ -1,0 +1,17 @@
+# Ignore bundler config.
+/.bundle
+/config/database.yml
+# Ignore all logfiles and tempfiles.
+/log/*
+!/log/.keep
+/tmp
+/data
+.DS_Store
+.ruby-version
+.env
+erd.pdf
+/public/uploads
+dump.rdb
+coverage
+
+latest.dump

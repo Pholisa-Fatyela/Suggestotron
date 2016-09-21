@@ -1,0 +1,15 @@
+<p>
+  <strong>Commenter:</strong>
+  <%= comment.commenter %>
+</p>
+
+<p>
+  <strong>Comment:</strong>
+  <%= comment.body %>
+</p>
+
+<p>
+  <%= link_to [comment.topic, comment], method: :delete, data: {confirm: "Are you sure?"}, class: 'btn btn-danger btn-xs' do %>
+    <i class="glyphicon glyphicon-trash"></i> Destroy Comment
+  <% end %>
+</p>

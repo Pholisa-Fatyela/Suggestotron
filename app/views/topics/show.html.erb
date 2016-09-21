@@ -1,5 +1,6 @@
 <p id="notice"><%= notice %></p>
 
+<h2>Topic</h2>
 <p>
   <strong>Title:</strong>
   <%= @topic.title %>
@@ -10,9 +11,16 @@
   <%= @topic.description %>
 </p>
 
+<h2>Comments</h2>
+<%= render @topic.comments %>
+
+<h2>Add a comment</h2>
+<%= render 'comments/form' %>
+
 <%= link_to edit_topic_path(@topic), class: 'btn btn-primary btn-xs' do %>
   <i class="glyphicon glyphicon-pencil"></i> Edit
-<% end %> |
+<% end %>
+|
 <%= link_to topics_path, class: 'btn btn-primary btn-xs' do %>
   <i class="glyphicon glyphicon-chevron-left"></i> Back
 <% end %>

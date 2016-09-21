@@ -1,5 +1,6 @@
 class TopicsController < ApplicationController
   before_action :set_topic, only: [:show, :edit, :update, :destroy]
+  http_basic_authenticate_with name: "pholisa", password: "secret", except: [:index, :show]
 
   # GET /topics
   # GET /topics.json
